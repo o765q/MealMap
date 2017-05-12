@@ -1,0 +1,34 @@
+<div>
+  <h1>
+    {{title}}
+  </h1>
+  <div > 
+    メニュー
+  </div>
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+      <div class="mdl-card__title">
+        <h2 class="mdl-card__title-text">Auckland Sky Tower<br>Auckland, New Zealand</h2>
+      </div>
+      <div class="mdl-card__media">
+        <sebm-google-map [latitude]="lat" [longitude]="lng"  [zoom]="zoom">
+          <sebm-google-map-marker 
+            *ngFor="let m of markers; let i = index"
+            [latitude]="m.lat"
+            [longitude]="m.lng"
+            [label]="m.label">
+          </sebm-google-map-marker>
+        </sebm-google-map>
+      </div>
+      <div class="mdl-card__supporting-text">
+        The Sky Tower is an observation and telecommunications tower located in Auckland,
+        New Zealand. It is 328 metres (1,076 ft) tall, making it the tallest man-made structure
+        in the Southern Hemisphere.
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a href="http://en.wikipedia.org/wiki/Sky_Tower_%28Auckland%29">Wikipedia entry</a>
+      </div>
+　  <div>
+     マップ
+    </div>
+  </div>
+</div>
